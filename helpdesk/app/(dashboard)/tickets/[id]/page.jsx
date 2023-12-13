@@ -2,6 +2,20 @@ import { notFound } from "next/navigation";
 
 export const dynamicParams = true
 
+
+// change the metadata on a specific ticket
+
+export async function generateMetadata({params}) {
+    const id = params.id
+
+    const res = await fetch(`http://localhost:4000/tickets/${id}`)
+    const ticket = await res.json()
+
+    return {
+        title: `Benji Helpdesk | ${ticket.title}`
+    }
+}
+
 export async function generateStaticParams () {
     const res = await fetch('http://localhost:4000/tickets')
 
