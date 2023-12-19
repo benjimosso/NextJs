@@ -27,27 +27,6 @@
       "priority": "medium",
       "user_email": "benji@mail.com",
       "id": "e-SKf47"
-    },
-    {
-      "title": "POSTMAN!!!!!!!!!!!!!!!!!!",
-      "body": "kflsjfksd",
-      "priority": "medium",
-      "user_email": "holaaa@mail.com",
-      "id": "8"
-    },
-    {
-      "title": "testing with postamn post request",
-      "body": "esto de aca es el body",
-      "user_email": "lachu@lachu.com",
-      "priority": "high",
-      "id": "XHeoM66"
-    },
-    {
-      "title": "OTRO TEST DESDE POSTAMAN",
-      "body": "esto de aca es el body",
-      "user_email": "lachu@lachu.com",
-      "priority": "high",
-      "id": "ZQobV2s"
     }
   ]
 }
