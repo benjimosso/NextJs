@@ -1,17 +1,19 @@
 import Link from 'next/link'
+import {cookies} from 'next/headers'
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 
 async function getTickets() {
+  const superbase = createServerComponentClient({cookies})
 
-  // imitate delay
-    // await new Promise(resolve => setTimeout(resolve, 3000));
+  const {data, error} = await superbase.from('Tickets')
+  .select()
 
-    const res = await fetch('http://localhost:4000/tickets', {
-        next: {
-            revalidate: 0 // use 0 to opt out of using cache, notice this may slower the application
-        }
-    })
+  if (error) {
+    console.log(error.message)
+  }
 
-    return res.json()
+  return data
+    
 }
 
 
